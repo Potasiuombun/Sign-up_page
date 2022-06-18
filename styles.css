@@ -58,6 +58,11 @@ table {
 	--img-offset:10rem;
 	--logo-height: 6rem;
 	--logo-width:6rem;
+	--logo-border-width:590px;
+	--form_margin_left:-35px;
+	--form_margin_left_offset: 50px;
+	--form-padding:5rem;
+	--right-side-width: 1000px;
   }
   
   @media (prefers-color-scheme: dark) {
@@ -181,8 +186,8 @@ body {
 
 header #slideshow .logo-container {
 	background-color: rgba(104, 94, 94, 0.397);
-	width: var(--img-width);
-
+	width: var(--logo-border-width);
+	overflow: hidden;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	position: absolute;
@@ -231,30 +236,377 @@ header #slideshow .logo-container {
 
 main {
 	padding-left: 10%;
+	display: flex;
+	flex-direction: column;
 }
 
 
 
 input {
-	border: 2px solid #000;
+	border: #E5E7EB;
 	margin-bottom: 15px;
 	padding: 5px;
 	border-radius: 5px;
+	width: 12rem;
+	height: 1rem;
+  }
+  
+  input:invalid {
+	border-color: red;
+  }
+  
+  input:valid {
+	border-color: green;
   }
 
-input:invalid
-{
-	border-color: red;
-}
-input:valid
-{
-	border-color: green;
+@media only screen and (max-width: 1700px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 900px;
+	 --form_margin_left: -30px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 60rem;
+	}
+
 }
 
+@media only screen and (max-width: 1600px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 800px;
+	 --form_margin_left:-30px;
+	}
 
-@media only screen and (max-width: 700px){
-	body{
-		display: flex;
-		flex-direction: column;
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 55rem;
+	}
+} 
+
+@media only screen and (max-width: 1500px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 760px;
+	 --form_margin_left: -30px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 60rem;
+	}
+
+}
+
+@media only screen and (max-width: 1400px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 760px;
+	 --form_margin_left: -170px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 55rem;
+	}
+	main .form_white{
+		width: 55rem;
+	}
+
+	main .form_white .top-text{
+		width: 40rem;
+		margin-left: -250px;
 	}
 }
+
+@media only screen and (max-width: 1300px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 730px;
+	 --form_margin_left: -195px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 55rem;
+	}
+	main .form_white{
+		width: 55rem;
+	}
+
+	main .form_white .top-text{
+		width: 35rem;
+		margin-left: -330px;
+	}
+}
+
+@media only screen and (max-width: 1200px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 730px;
+	 --form_margin_left: -195px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 55rem;
+	}
+	main .form_white{
+		width: 55rem;
+	}
+
+	main .form_white .top-text{
+		width: 30rem;
+		margin-left: -400px;
+	}
+}
+
+@media only screen and (max-width: 1100px	){
+	:root{
+	 --form-padding:0px;
+	 --right-side-width: 730px;
+	 --form_margin_left: -195px;
+	}
+
+	header #slideshow .logo-container {
+		width: 33.1rem;
+	}
+	header{
+		width: 30rem;
+	}
+	main{
+		width: 55rem;
+	}
+	main .form_white{
+		width: 55rem;
+	}
+
+	main .form_white .top-text{
+		width: 25rem;
+		margin-left: -500px;
+	}
+}
+
+@media only screen and (max-width: 1000px	){
+	:root{
+		--form-padding:0px;
+		--right-side-width: 41rem;
+		--form_margin_left: -15px;
+	   }
+	   body{
+		   display: flex;
+		   flex-direction: column;
+		   justify-content: center;
+		   align-items: center;
+	   }
+   
+	   header #slideshow .logo-container {
+		   width: 40rem;
+	   }
+	   header{
+		   width: 40rem;
+		   height:30rem
+	   }
+
+	   main{
+			width:40rem;
+			margin-left:-20px;
+	   }
+
+	   main .form_white{
+		width: 40rem;
+	}
+
+	main .form_white .top-text{
+		width: 40rem;
+		margin-left: 0px;
+	}
+}
+
+
+
+@media only screen and (max-width: 600px	){
+	:root{
+		--form-padding:0px;
+		--right-side-width: 38rem;
+		--form_margin_left: 30px;
+	   }
+	   body{
+		   display: flex;
+		   flex-direction: column;
+		   justify-content: center;
+		   align-items: center;
+	   }
+   
+	   header #slideshow .logo-container {
+		   width: 40rem;
+	   }
+	   header{
+		   width: 40rem;
+		   height:30rem
+	   }
+
+	   main{
+			width:40rem;
+			margin-left:-20px;
+	   }
+
+	   main .form_white{
+		width: 30rem;
+	}
+
+	main .form_white .top-text{
+		width: 30rem;
+		margin-left: 0px;
+	}
+}
+
+
+main{
+	background: white;
+	background-color: antiquewhite;
+	margin-right: 10%;
+	overflow:visible;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 2%;
+}
+main .form_white{
+ 	padding-top: 10rem;
+	 display: flex;
+	flex-direction: column;
+	justify-content:flex-start;
+	align-items: center;
+	padding-left: 0%;
+}
+main .form_white .top-text{
+	font-size: 30px;
+	color: black;
+	text-align: left;
+	padding-bottom: 3rem;
+}
+
+main .form_white .form_input {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(104, 94, 94, 0.397);
+	margin-left: var(--form_margin_left);
+	width: var(--right-side-width);
+}
+
+main .form_white .form_input form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: var(--right-side-width);
+	padding-left: 3%;
+	padding-top: 2%;
+	
+}
+main .form_white .form_input .form_border{
+	color: black;
+}
+
+main .form_white .form_input .submit_button{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+main .form_white .form_input .submit-button input{
+	display: flex;
+	width: 10rem;
+	height:2.5rem;
+	color: black;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bolder;
+	font-size: 18px;
+	border: #E5E7EB;
+}
+
+main .form_white .form_input .form_border{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	justify-content: space-between;
+}
+
+main .form_white .form_input .form_border .form_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+main .form_white .form_input .form_border .form_row .fn_container{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-right: var(--form-padding);
+}
+
+main .form_white .form_input .form_border .form_row .ln_container{
+	display:flex;
+	flex-direction: column;
+	padding-right: var(--form-padding);
+}
+
+main .form_white .form_input .form_border .form_row .email_container{
+	display:flex;
+	flex-direction: column;
+	padding-right: var(--form-padding);
+}
+
+main .form_white .form_input .form_border .form_row .phn_container{
+	display:flex;
+	flex-direction: column;
+	padding-right: var(--form-padding);
+}
+
+main .form_white .form_input .form_border .form_row .pass_container{
+	display:flex;
+	flex-direction: column;
+	padding-right: var(--form-padding);
+}
+
+main .form_white .form_input .form_border .form_row .pass_conf_container{
+	display:flex;
+	flex-direction: column;
+	padding-right: var(--form-padding);
+}
+
+
+
+
